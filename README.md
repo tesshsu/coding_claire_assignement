@@ -1,4 +1,4 @@
-# coding_claire_assignement
+# coding_claire_assignment
 
 # Repo structure
-Front / back for each assignements
+Front / back for each assignment
