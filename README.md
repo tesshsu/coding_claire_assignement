@@ -17,8 +17,8 @@ Run http://localhost:3001/index.html
 
 <img width="721" alt="Capture d’écran 2024-04-03 à 11 34 04" src="https://github.com/tesshsu/coding_claire_assignement/assets/3927152/46a0d754-e6b1-48f8-80f3-8245c8c92f89">
 
+[testStates.webm](https://github.com/tesshsu/coding_claire_assignement/assets/3927152/394258a6-1e9e-494c-abc5-a3d5ab6a2cc2)
 
-[testStates.webm](https://github.com/tesshsu/coding_claire_assignement/assets/3927152/00ccd58f-90bc-429c-9911-51eff0282341)
 
 
 ## Test api
