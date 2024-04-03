@@ -1,12 +1,26 @@
 const express = require('express');
 const app = express();
-//const port = process.env.PORT || 3001;
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3001;
+//const port = process.env.PORT || 3000;
+const path = require('path');
+
+const states = require('./states');
 
 app.use(express.json());
 
+
 app.get('/', (req, res) => {
   res.send('Welcome to the Test API');
+});
+
+app.get('/states', (req, res) => {
+  const query = (req.query.q || '').toLowerCase();
+  const filteredStates = states
+                        .filter(state => state.toLowerCase().includes(query))
+                        .sort()
+                        .slice(0, 8);
+  
+  res.json(filteredStates);
 });
 
 app.post('/emails', (req, res) => {
@@ -24,6 +38,9 @@ app.post('/emails', (req, res) => {
     }
   });
 
+
+  // Serve any static files
+app.use(express.static(path.join(__dirname, '../front')));
 
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);

@@ -1,0 +1,37 @@
+.container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 2px solid #109ad5;
+    border-radius: 5px;
+  }
+
+.container label{
+    font-size: 15px;
+    color: #253448;
+}
+  
+  #typeahead {
+    width: 90%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #3d6af0;
+    border-radius: 5px;
+  }
+  
+  #dropdown {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  #dropdown li {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  #dropdown li:hover {
+    background-color: #f1f1f1;
+  }
