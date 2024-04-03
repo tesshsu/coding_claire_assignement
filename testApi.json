@@ -1,0 +1,96 @@
+{
+  "version": 6,
+  "entities": [
+    {
+      "entity": {
+        "type": "Project",
+        "id": "02e7718e-da2f-42c7-9f95-716b87b85f15",
+        "name": "Local"
+      },
+      "children": [
+        {
+          "entity": {
+            "type": "Scenario",
+            "id": "d5920e11-db9d-4c87-9679-1613f3a35904",
+            "name": "Claire APIs"
+          },
+          "children": [
+            {
+              "entity": {
+                "type": "Request",
+                "method": {
+                  "requestBody": true,
+                  "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+                  "name": "POST"
+                },
+                "body": {
+                  "formBody": {
+                    "overrideContentType": true,
+                    "encoding": "application/x-www-form-urlencoded",
+                    "items": []
+                  },
+                  "bodyType": "Text",
+                  "textBody": "{\n  \"to\": \"tess.hsu@gmail.com\",\n  \"subject\": \"Test Email\",\n  \"body\": \"This is a test email from the API.\"\n}"
+                },
+                "uri": {
+                  "query": {
+                    "delimiter": "&",
+                    "items": []
+                  },
+                  "scheme": {
+                    "name": "http",
+                    "version": "V11"
+                  },
+                  "host": "localhost:3001",
+                  "path": "/emails"
+                },
+                "id": "3400484a-f547-4252-8bd3-07713da3dd65",
+                "name": "Post email",
+                "headers": [
+                  {
+                    "enabled": true,
+                    "name": "Content-Type",
+                    "value": "application/json"
+                  }
+                ]
+              }
+            },
+            {
+              "entity": {
+                "type": "Request",
+                "method": {
+                  "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+                  "name": "GET"
+                },
+                "body": {
+                  "formBody": {
+                    "overrideContentType": true,
+                    "encoding": "application/x-www-form-urlencoded",
+                    "items": []
+                  },
+                  "bodyType": "Text",
+                  "textBody": "{\n  \"to\": \"tess.hsu@gmail.com\",\n  \"subject\": \"Test Email\",\n  \"body\": \"This is a test email from the API.\"\n}"
+                },
+                "uri": {
+                  "query": {
+                    "delimiter": "&",
+                    "items": []
+                  },
+                  "scheme": {
+                    "name": "http",
+                    "version": "V11"
+                  },
+                  "host": "localhost:3001",
+                  "path": "/states"
+                },
+                "id": "9cf8800d-dd89-40b0-b83c-38961e4a50e0",
+                "name": "States",
+                "headers": []
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
