@@ -7,17 +7,16 @@ $(document).ready(function() {
     $typeahead.on('input', function() {
       const query = $(this).val();
       if (query.length >= 2) {
-        $.ajax({
-          url: '/back/states',
-          data: { q: query },
-          success: function(data) {
+        $.getJSON('/states', { q: query }, function(data) {
             $dropdown.empty();
+            console.log(data); // Check the data structure
             data.forEach(state => {
               $dropdown.append(`<li>${state}</li>`);
             });
             selectedIndex = -1;
-          }
-        });
+          }).fail(function(jqXHR, textStatus, errorThrown) {
+            console.error('AJAX error:', textStatus, errorThrown); // Error handling
+          });
       } else {
         $dropdown.empty();
       }

@@ -8,15 +8,19 @@ const states = require('./states');
 
 app.use(express.json());
 
-// Serve any static files
-app.use(express.static(path.join(__dirname, '../front')));
-
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../front/index.html'));
-});
 
 app.get('/', (req, res) => {
   res.send('Welcome to the Test API');
+});
+
+app.get('/states', (req, res) => {
+  const query = (req.query.q || '').toLowerCase();
+  const filteredStates = states
+                        .filter(state => state.toLowerCase().includes(query))
+                        .sort()
+                        .slice(0, 8);
+  
+  res.json(filteredStates);
 });
 
 app.post('/emails', (req, res) => {
@@ -34,16 +38,9 @@ app.post('/emails', (req, res) => {
     }
   });
 
-  app.get('/states', (req, res) => {
-    const query = (req.query.q || '').toLowerCase();
-    const filteredStates = states
-                          .filter(state => state.toLowerCase().includes(query))
-                          .sort()
-                          .slice(0, 8);
-    
-    res.json(filteredStates);
-  });
 
+  // Serve any static files
+app.use(express.static(path.join(__dirname, '../front')));
 
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
