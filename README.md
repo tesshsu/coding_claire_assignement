@@ -25,6 +25,10 @@ Or go to vercel deploy path https://coding-claire-assignement-9orkh13xr-tess-hsu
 ## Test api
 Use postMan or Talend API Tester, you could import testApi.json in the root
 
-<img width="1025" alt="Capture d’écran 2024-04-03 à 11 44 20" src="https://github.com/tesshsu/coding_claire_assignement/assets/3927152/3d2ede28-3953-4067-a76d-12b8f39c6be0">
 
-<img width="1035" alt="Capture d’écran 2024-04-03 à 11 44 10" src="https://github.com/tesshsu/coding_claire_assignement/assets/3927152/92f48b4e-49a1-43ef-b45c-d102e12966cb">
+<img width="1257" alt="Capture d’écran 2024-04-04 à 12 37 33" src="https://github.com/tesshsu/coding_claire_assignement/assets/3927152/9b07c9af-76f6-4755-a8a5-2beb10e75a6b">
+
+<img width="1240" alt="Capture d’écran 2024-04-04 à 12 37 26" src="https://github.com/tesshsu/coding_claire_assignement/assets/3927152/bdaab3e5-cd74-4a5a-9f1c-160d8c195285">
+
+
+
