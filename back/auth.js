@@ -35,4 +35,4 @@ const authenticateJWT = (req, res, next) => {
     }
 };
 
-mmodule.exports = { createJWT, verifyJWT, authenticateJWT };
+module.exports = { createJWT, verifyJWT, authenticateJWT };
