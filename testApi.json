@@ -11,6 +11,7 @@
         {
           "entity": {
             "type": "Scenario",
+            "description": "",
             "id": "d5920e11-db9d-4c87-9679-1613f3a35904",
             "name": "Claire APIs"
           },
@@ -37,11 +38,7 @@
                     "delimiter": "&",
                     "items": []
                   },
-                  "scheme": {
-                    "name": "http",
-                    "version": "V11"
-                  },
-                  "host": "localhost:3001",
+                  "host": "${\"url\"}",
                   "path": "/emails"
                 },
                 "id": "3400484a-f547-4252-8bd3-07713da3dd65",
@@ -76,11 +73,7 @@
                     "delimiter": "&",
                     "items": []
                   },
-                  "scheme": {
-                    "name": "http",
-                    "version": "V11"
-                  },
-                  "host": "localhost:3001",
+                  "host": "${\"url\"}",
                   "path": "/states"
                 },
                 "id": "9cf8800d-dd89-40b0-b83c-38961e4a50e0",
@@ -91,6 +84,21 @@
           ]
         }
       ]
+    }
+  ],
+  "environments": [
+    {
+      "id": "d810a09e-614d-46de-8677-ef0e2168a720",
+      "name": "Local",
+      "variables": {
+        "87108c6d-9d16-47b0-b2c3-426eb6f4efad": {
+          "createdAt": "2023-08-23T09:57:28.336+02:00",
+          "name": "url",
+          "value": "http://localhost:3000",
+          "enabled": true,
+          "private": false
+        }
+      }
     }
   ]
 }
