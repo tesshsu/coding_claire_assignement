@@ -12,7 +12,9 @@ npm install
 npm start
 
 # Run client side
-Run http://localhost:3001/index.html
+Run http://localhost:3000/index.html
+
+Or go to vercel deploy path https://coding-claire-assignement-9orkh13xr-tess-hsus-projects.vercel.app/index.html
 
 <img width="721" alt="Capture d’écran 2024-04-03 à 11 34 04" src="https://github.com/tesshsu/coding_claire_assignement/assets/3927152/46a0d754-e6b1-48f8-80f3-8245c8c92f89">
 
@@ -21,7 +23,7 @@ Run http://localhost:3001/index.html
 
 
 ## Test api
-Use postMan or Talend API Tester, you could import testApi.json
+Use postMan or Talend API Tester, you could import testApi.json in the root
 
 <img width="1025" alt="Capture d’écran 2024-04-03 à 11 44 20" src="https://github.com/tesshsu/coding_claire_assignement/assets/3927152/3d2ede28-3953-4067-a76d-12b8f39c6be0">
 
