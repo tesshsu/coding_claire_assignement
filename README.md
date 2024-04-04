@@ -8,9 +8,8 @@ Front / back for each assignment
 
 
 ### Install the dependences and start the server:
-cd back
 npm install
-node index.js
+npm start
 
 # Run client side
 Run http://localhost:3001/index.html
