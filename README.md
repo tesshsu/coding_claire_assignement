@@ -29,7 +29,9 @@ Once you had token then add this in your header auth Bearer token in order to se
 
 <img width="1257" alt="Capture d’écran 2024-04-04 à 12 37 33" src="https://github.com/tesshsu/coding_claire_assignement/assets/3927152/9b07c9af-76f6-4755-a8a5-2beb10e75a6b">
 
-<img width="1240" alt="Capture d’écran 2024-04-04 à 12 37 26" src="https://github.com/tesshsu/coding_claire_assignement/assets/3927152/bdaab3e5-cd74-4a5a-9f1c-160d8c195285">
+<img width="1244" alt="Capture d’écran 2024-04-05 à 15 14 17" src="https://github.com/tesshsu/coding_claire_assignement/assets/3927152/f0875a32-f1b3-4b75-b7c6-19a469e6ff87">
+
+![mail](https://github.com/tesshsu/coding_claire_assignement/assets/3927152/a0e78bc0-14aa-439c-abb8-437951b6e91a)
 
 
 
