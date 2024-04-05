@@ -31,7 +31,7 @@
                     "items": []
                   },
                   "bodyType": "Text",
-                  "textBody": "{\n  \"to\": \"tess.hsu@gmail.com\",\n  \"subject\": \"Test Email\",\n  \"body\": \"This is a test email from the API.\"\n}"
+                  "textBody": "{\n  \"to\": \"yating@itekcom.com\",\n  \"subject\": \"Test Email send By post mail route\",\n  \"textBody\": \"This is the text version of the email.\",\n  \"htmlPart\": \"<h3>Dear passenger, welcome to ClaireTest API!</h3><br />May the delivery force be with you!\"\n}"
                 },
                 "uri": {
                   "query": {
@@ -48,6 +48,11 @@
                     "enabled": true,
                     "name": "Content-Type",
                     "value": "application/json"
+                  },
+                  {
+                    "enabled": true,
+                    "name": "Authorization",
+                    "value": "Bearer ${\"token\"}"
                   }
                 ]
               }
@@ -80,6 +85,42 @@
                 "name": "States",
                 "headers": []
               }
+            },
+            {
+              "entity": {
+                "type": "Request",
+                "method": {
+                  "requestBody": true,
+                  "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+                  "name": "POST"
+                },
+                "body": {
+                  "formBody": {
+                    "overrideContentType": true,
+                    "encoding": "application/x-www-form-urlencoded",
+                    "items": []
+                  },
+                  "bodyType": "Text",
+                  "textBody": "{\n    \"username\": \"admin\",\n    \"password\": \"password\"\n}"
+                },
+                "uri": {
+                  "query": {
+                    "delimiter": "&",
+                    "items": []
+                  },
+                  "host": "${\"url\"}",
+                  "path": "/login"
+                },
+                "id": "b3418968-8ae0-4c94-95a8-a12848a01cb4",
+                "name": "Login",
+                "headers": [
+                  {
+                    "enabled": true,
+                    "name": "Content-Type",
+                    "value": "application/json"
+                  }
+                ]
+              }
             }
           ]
         }
@@ -95,6 +136,13 @@
           "createdAt": "2023-08-23T09:57:28.336+02:00",
           "name": "url",
           "value": "http://localhost:3000",
+          "enabled": true,
+          "private": false
+        },
+        "6e5606af-3df3-4b1c-b7e8-36e5f606e131": {
+          "createdAt": "2024-04-04T18:14:55.109+02:00",
+          "name": "token",
+          "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJuYW1lIjoiYWRtaW4ifSwiaWF0IjoxNzEyMzIwOTc2LCJleHAiOjE3MTIzMjQ1NzZ9.s3d1zGvVf0bERKeAcBsWXTnDUFtrM5j1sfj09jGj35w",
           "enabled": true,
           "private": false
         }
