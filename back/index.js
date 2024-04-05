@@ -5,6 +5,7 @@ const app = express();
 const path = require('path');
 const port = process.env.DEFAULT_PORT || 3000;
 const states = require('./states');
+const { sendEmail } = require('./sendMail');
 
 app.use(express.json());
 
@@ -37,13 +38,20 @@ app.post('/login', (req, res) => {
 
 app.post('/emails', authenticateJWT, (req, res) => {
   try {
-      const { to, subject, body } = req.body;
-      if (!to || !subject || !body) {
-          throw new Error('One or more required fields are missing');
+      const { to, subject, textBody, htmlPart } = req.body;
+      if (!to || !subject || !textBody || !htmlPart) {
+        throw new Error('One or more required fields are missing');
       }
 
-      console.log(`Email received: To: ${to}, Subject: ${subject}, Body: ${body}`);
-      res.sendStatus(200);
+      // Send mail through Google mail service
+      sendEmail(to, subject, textBody, htmlPart)
+        .then(() => {
+          res.status(200).send('Email sent successfully');
+        })
+        .catch((error) => {
+          console.error('Error sending email:', error.message);
+          res.status(500).send('Internal Server Error');
+        });
   } catch (error) {
       console.error('Error in /emails route:', error.message);
       res.status(400).send('Bad request: ' + error.message);
